@@ -1,0 +1,37 @@
+﻿<Window x:Class="Wpf_menu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" AllowsTransparency="True" WindowStyle="None">
+    <Window.ContextMenu>
+        <ContextMenu Name="gornunurluk">
+            <MenuItem Header="%50" Name="elli" Click="elli_Click"></MenuItem>
+            <MenuItem Header="%75" Name="yetmisbes" Click="yetmisbes_Click"></MenuItem>
+        </ContextMenu>
+
+       
+    </Window.ContextMenu>
+    <Grid>
+        <Menu Height="23" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="170">
+            <MenuItem Header="Dosya">
+                <MenuItem Header="Aç" Name="ac" Click="ac_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Wpf_menu;component/Images/favorite.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Kaydet" Name="kaydet" Click="kaydet_Click" />
+                <Separator></Separator>
+                <MenuItem Header="Kapat" />
+            </MenuItem>
+            <MenuItem Header="Görünüm">
+                <MenuItem Header="%50" Click="elli_Click" />
+                <MenuItem Header="%75" Click="yetmisbes_Click" />
+            </MenuItem>
+            <MenuItem Header="Düzen">
+                <MenuItem Header="Kes" />
+                <MenuItem Header="Kopyale" />
+                <MenuItem Header="Yapıştır" />
+            </MenuItem>
+        </Menu>
+        <TextBox Height="129" HorizontalAlignment="Left" Margin="134,50,0,0" Name="textBox1" VerticalAlignment="Top" Width="239" />
+    </Grid>
+</Window>
